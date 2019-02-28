@@ -51,6 +51,58 @@ console.log(name)
 // strings on my own
 let greeting = "My name is" + " " + name;
 console.log(greeting)
+
+console.log("we are building functions");
+// function to make square numbers
+function makeSquare(theNumb) {
+  let squared = theNumb * theNumb;
+  return squared;
+}
+console.log(makeSquare (3))
+
+console.log(makeSquare(5))
+
+// making my own function 
+  function makeName(firstName, middleName, lastName) {
+  let fullName = firstName + " " + middleName + " " + lastName
+  return fullName; 
+  }
+console.log(makeName("Mary", "Katherine", "McFadden"))
+console.log(makeName ("Robert", "\"Beto\"", "O'Rourke"));
+
+let fullNameReturn = makeName("Mary", "Katherine", "McFadden");
+console.log(fullNameReturn.toUpperCase())
+
+// Make a name with middle initial
+console.log("making a better name function")
+function makeBetterName(firstName, middleName, lastName) {
+  if (middleName.length === 1) {
+    middleName = middleName + ".";
+    // adding and updating:
+    let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName;
+} else {
+  let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName;
+  }
+}
+console.log(makeBetterName("Joan", "Marie", "Larkin"));
+console.log(makeBetterName("Donald", "F", "Trump"));
+
+function makeScore(homeScore, awayScore) {
+  if (homeScore > awayScore) {
+  return "Home team wins";
+} else if (homeScore < awayScore) { 
+  return "The away team wins";
+  } else {
+    return "Tie game";
+}
+}
+  console.log(makeScore (8,7))
+  console.log(makeScore (2,5))
+  console.log(makeScore (5,5))
+
+
     </script>
     
 </body>
